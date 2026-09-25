@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#081532"/>
+      <stop offset="0.4" stop-color="#103069"/>
+      <stop offset="0.75" stop-color="#1a4d92"/>
+      <stop offset="1" stop-color="#2a72cf"/>
+    </linearGradient>
+    <radialGradient id="glowTop" cx="0.72" cy="0.18" r="0.55">
+      <stop offset="0" stop-color="#eaf4ff" stop-opacity="0.55"/>
+      <stop offset="0.5" stop-color="#7aa7ef" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#7aa7ef" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowLeft" cx="0.12" cy="0.7" r="0.5">
+      <stop offset="0" stop-color="#4f8fe0" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#4f8fe0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowHub" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="0.3" stop-color="#9cc0f5" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#9cc0f5" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.3" fill="#ffffff" fill-opacity="0.12"/>
+    </pattern>
+    <pattern id="grid" width="110" height="110" patternUnits="userSpaceOnUse">
+      <path d="M110 0 L0 0 0 110" fill="none" stroke="#9db9ea" stroke-opacity="0.14" stroke-width="1"/>
+    </pattern>
+    <pattern id="hex" width="60" height="104" patternUnits="userSpaceOnUse">
+      <path d="M30 0 L60 17 L60 52 L30 69 L0 52 L0 17 Z" fill="none" stroke="#a8c2ef" stroke-opacity="0.16" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <rect width="1600" height="900" fill="url(#hex)" opacity="0.6"/>
+  <rect width="1600" height="900" fill="url(#dots)"/>
+  <rect width="1600" height="900" fill="url(#glowTop)"/>
+  <rect width="1600" height="900" fill="url(#glowLeft)"/>
+
+  <!-- Antenas / torres en el horizonte -->
+  <g stroke="#c7d8f5" stroke-opacity="0.35" stroke-width="2" fill="none">
+    <path d="M1480 470 L1480 360 M1477 362 L1483 370 M1477 386 L1483 394 M1477 410 L1483 418 M1477 434 L1483 442"/>
+    <path d="M1280 520 L1280 398 M1276 400 L1284 412 M1276 428 L1284 440 M1276 456 L1284 468 M1276 484 L1284 496"/>
+    <path d="M1540 430 L1540 250 M1536 252 L1544 262 M1536 282 L1544 292 M1536 312 L1544 322 M1536 342 L1544 352"/>
+  </g>
+  <g fill="#c7d8f5" fill-opacity="0.6">
+    <circle cx="1280" cy="398" r="5"/>
+    <circle cx="1480" cy="360" r="5"/>
+    <circle cx="1540" cy="250" r="5.5"/>
+  </g>
+
+  <!-- Ondas de señal desde la torre -->
+  <g fill="none" stroke="#bfd8ff" stroke-opacity="0.4">
+    <path d="M1540 250 A 80 80 0 0 1 1540 410" stroke-width="3"/>
+    <path d="M1540 240 A 110 110 0 0 1 1540 420" stroke-width="2.4"/>
+    <path d="M1540 230 A 140 140 0 0 1 1540 430" stroke-width="2"/>
+    <path d="M1540 220 A 175 175 0 0 1 1540 440" stroke-width="1.6" stroke-opacity="0.5"/>
+  </g>
+
+  <!-- Satélite -->
+  <g>
+    <rect x="1030" y="120" width="46" height="26" rx="6" fill="#dce9fb" fill-opacity="0.9"/>
+    <rect x="1053" y="96" width="6" height="30" fill="#b9d2f5"/>
+    <rect x="1026" y="96" width="34" height="6" rx="3" fill="#b9d2f5"/>
+    <rect x="1030" y="146" width="6" height="22" fill="#b9d2f5"/>
+    <circle cx="1036" cy="176" r="4" fill="#ffffff"/>
+    <g stroke="#b9d2f5" stroke-opacity="0.7" stroke-width="3">
+      <path d="M996 133 L1124 133"/>
+      <path d="M996 133 C 970 133 960 118 960 96 M996 133 C 970 133 960 148 960 170"/>
+      <path d="M1124 133 C 1150 133 1160 118 1160 96 M1124 133 C 1150 133 1160 148 1160 170"/>
+    </g>
+  </g>
+
+  <!-- Topología principal: malla integrada con un hub central -->
+  <g stroke="#9db9ea" stroke-opacity="0.45" stroke-width="1.4" fill="none">
+    <path d="M300 700 L560 410"/>
+    <path d="M300 700 L780 720"/>
+    <path d="M300 700 L140 540"/>
+    <path d="M300 700 L420 830" stroke-opacity="0.2"/>
+    <path d="M560 410 L1040 300"/>
+    <path d="M560 410 L940 560"/>
+    <path d="M560 410 L340 220"/>
+    <path d="M940 560 L1040 300"/>
+    <path d="M780 720 L940 560"/>
+    <path d="M780 720 L1240 640"/>
+    <path d="M1040 300 L1360 180"/>
+    <path d="M1360 180 L1240 640" stroke-opacity="0.25"/>
+    <path d="M1040 300 L150 140"/>
+    <path d="M340 220 L150 140" stroke-opacity="0.3"/>
+    <path d="M150 140 L140 540" stroke-opacity="0.35"/>
+    <path d="M940 560 L1260 640"/>
+    <path d="M1240 640 L1440 470"/>
+    <path d="M1360 180 L1560 150" stroke-opacity="0.3"/>
+  </g>
+
+  <!-- Conexiones secundarias (malla fina) -->
+  <g stroke="#9db9ea" stroke-opacity="0.2" stroke-width="1" fill="none">
+    <path d="M420 830 L560 410"/>
+    <path d="M420 830 L940 560"/>
+    <path d="M780 720 L480 900"/>
+    <path d="M1040 300 L1240 640" stroke-opacity="0.15"/>
+    <path d="M1440 470 L1260 640"/>
+    <path d="M1040 300 L780 720" stroke-opacity="0.15"/>
+    <path d="M300 700 L940 560" stroke-opacity="0.15"/>
+    <path d="M150 140 L340 220" stroke-opacity="0.2"/>
+  </g>
+
+  <!-- Partículas de datos fluyendo (animación de flujo) -->
+  <g>
+    <path id="flow1" d="M560 410 L1040 300" stroke="#9cc0f5" stroke-opacity="0.55" stroke-width="2" stroke-dasharray="6 14">
+      <animate attributeName="stroke-dashoffset" from="20" to="-20" dur="1.4s" repeatCount="indefinite"/>
+    </path>
+    <path id="flow2" d="M560 410 L940 560" stroke="#9cc0f5" stroke-opacity="0.5" stroke-width="2" stroke-dasharray="6 14">
+      <animate attributeName="stroke-dashoffset" from="20" to="-20" dur="1.1s" repeatCount="indefinite"/>
+    </path>
+    <path id="flow3" d="M1040 300 L1360 180" stroke="#9cc0f5" stroke-opacity="0.45" stroke-width="2" stroke-dasharray="5 12">
+      <animate attributeName="stroke-dashoffset" from="17" to="-17" dur="1.6s" repeatCount="indefinite"/>
+    </path>
+    <path id="flow4" d="M300 700 L560 410" stroke="#9cc0f5" stroke-opacity="0.5" stroke-width="2" stroke-dasharray="5 12">
+      <animate attributeName="stroke-dashoffset" from="17" to="-17" dur="1.3s" repeatCount="indefinite"/>
+    </path>
+    <path id="flow5" d="M1240 640 L1440 470" stroke="#9cc0f5" stroke-opacity="0.45" stroke-width="2" stroke-dasharray="5 12">
+      <animate attributeName="stroke-dashoffset" from="17" to="-17" dur="1.5s" repeatCount="indefinite"/>
+    </path>
+    <path id="flow6" d="M150 140 L340 220" stroke="#9cc0f5" stroke-opacity="0.4" stroke-width="2" stroke-dasharray="5 12">
+      <animate attributeName="stroke-dashoffset" from="17" to="-17" dur="1.2s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Nodos principales -->
+  <g fill="#d5e4fd">
+    <circle cx="300" cy="700" r="6"/>
+    <circle cx="780" cy="720" r="6"/>
+    <circle cx="940" cy="560" r="5.5"/>
+    <circle cx="1240" cy="640" r="6"/>
+    <circle cx="1040" cy="300" r="7"/>
+    <circle cx="1360" cy="180" r="6"/>
+    <circle cx="340" cy="220" r="6"/>
+    <circle cx="150" cy="140" r="5"/>
+    <circle cx="140" cy="540" r="5"/>
+    <circle cx="420" cy="830" r="5"/>
+    <circle cx="1440" cy="470" r="5"/>
+    <circle cx="480" cy="900" r="5"/>
+    <circle cx="1560" cy="150" r="4.5"/>
+  </g>
+
+  <!-- Hub central con anillos -->
+  <g>
+    <circle cx="560" cy="410" r="40" fill="none" stroke="#ffffff" stroke-opacity="0.3" stroke-width="1.2">
+      <animate attributeName="r" values="30;58;30" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values="0.4;0.08;0.4" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="560" cy="410" r="26" fill="none" stroke="#ffffff" stroke-opacity="0.28" stroke-width="1.2"/>
+    <circle cx="560" cy="410" r="14" fill="url(#glowHub)"/>
+    <circle cx="560" cy="410" r="9" fill="#ffffff">
+      <animate attributeName="opacity" values="1;0.6;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="560" cy="410" r="4" fill="#ffffff"/>
+  </g>
+
+  <!-- Nodos intermedios satelitales del hub -->
+  <g fill="#bfd8ff">
+    <circle cx="504" cy="452" r="3"/>
+    <circle cx="618" cy="452" r="3"/>
+    <circle cx="504" cy="368" r="3"/>
+    <circle cx="618" cy="368" r="3"/>
+    <circle cx="560" cy="488" r="3"/>
+    <circle cx="560" cy="332" r="3"/>
+    <circle cx="612" cy="386" r="3"/>
+    <circle cx="508" cy="386" r="3"/>
+  </g>
+
+  <!-- Ondas menores -->
+  <g fill="none" stroke="#bfd8ff" stroke-opacity="0.22">
+    <path d="M200 300 A 60 60 0 0 0 200 420" stroke-width="2.6"/>
+    <path d="M215 292 A 80 80 0 0 0 215 428" stroke-width="2"/>
+    <path d="M942 700 A 70 70 0 0 1 942 840" stroke-width="2.4"/>
+    <path d="M928 692 A 92 92 0 0 1 928 848" stroke-width="1.8"/>
+  </g>
+
+  <!-- Profundidad inferior -->
+  <path d="M0 900 C 380 790 760 862 1600 748 L1600 900 Z" fill="#07112a" fill-opacity="0.6"/>
+  <path d="M0 900 C 520 836 900 866 1600 820 L1600 900 Z" fill="#04091a" fill-opacity="0.72"/>
+</svg>
